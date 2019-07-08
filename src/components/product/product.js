@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Product extends Component {
   render () {
     const {
-      id,
+      // id,
       title,
       description,
       url,
@@ -22,7 +22,7 @@ class Product extends Component {
         </div>
         <div className="middle aligned content">
           <div className="description">
-            <a href={url}>{title}</a>
+            <a href={url}>{title} ({votes} votes)</a>
             <p>{description}</p>
           </div>
           <div className="extra">

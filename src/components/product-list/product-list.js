@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import products from './seed'
 import Product from '../product/product'
 
+products.sort((a, b) => b.votes - a.votes)
+
 class ProductList extends Component {
   render () {
     return (
