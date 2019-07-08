@@ -3,13 +3,14 @@ import React, { Component } from 'react'
 class Product extends Component {
   render () {
     const {
-      // id,
+      id,
       title,
       description,
       url,
       votes,
       submitterAvatarUrl,
-      productImageUrl
+      productImageUrl,
+      onVote
     } = this.props
 
     return (
@@ -21,8 +22,14 @@ class Product extends Component {
           />
         </div>
         <div className="middle aligned content">
+          <div className='header'>
+            <a onClick={() => onVote(id)}>
+              <i className='large caret up icon' />
+            </a>
+            {votes}
+          </div>
           <div className="description">
-            <a href={url}>{title} ({votes} votes)</a>
+            <a href={url}>{title}</a>
             <p>{description}</p>
           </div>
           <div className="extra">
